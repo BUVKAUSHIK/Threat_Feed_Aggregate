@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Threat Feed Aggregator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f0f0; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+        th, td { padding: 8px; border-bottom: 1px solid #ccc; }
+        th { background: #ddd; }
+    </style>
+</head>
+<body>
+
+    <h1>🔗 Malicious URLs (from URLHaus)</h1>
+    <table>
+        <tr>
+            <th>URL</th>
+            <th>Date Added</th>
+            <th>Threat Type</th>
+        </tr>
+        {% for ioc in urls %}
+        <tr>
+            <td><a href="{{ ioc.url }}" target="_blank">{{ ioc.url }}</a></td>
+            <td>{{ ioc.date_added }}</td>
+            <td>{{ ioc.threat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>🌐 Blacklisted IPs (from AbuseIPDB)</h1>
+    <table>
+        <tr>
+            <th>IP Address</th>
+            <th>Abuse Score</th>
+            <th>Country</th>
+        </tr>
+        {% for ip in ips %}
+        <tr>
+            <td>{{ ip.ipAddress }}</td>
+            <td>{{ ip.abuseConfidenceScore }}</td>
+            <td>{{ ip.countryCode }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Threat Feed Aggregator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f0f0; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+        th, td { padding: 8px; border-bottom: 1px solid #ccc; }
+        th { background: #ddd; }
+    </style>
+</head>
+<body>
+
+    
+
+</body>
+</html>
