@@ -52,6 +52,8 @@ python app.py
 
 Open your browser at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
+![Screenshot](Screenshot_19-5-2025_132920_127.0.0.1.jpeg)
+
  💡 Future Improvements
 
 * IOC export to CSV/JSON
